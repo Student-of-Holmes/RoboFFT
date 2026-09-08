@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoboFFT: Finetuning generative robot policy via online reinforcement learning with forward process</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RoboFFT: Finetuning generative robot policy via online reinforcement learning with forward process</h1>
+          <!-- <div class="is-size-4 has-text-weight-semibold" style="margin: 0.5rem 0 1rem;">
+             Under review
+          </div> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://student-of-holmes.github.io">Yu Li</a><sup>*12</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/shshsunny">Shenghe Hu</a><sup>*3</sup>,</span>
+            <span class="author-block">
+              <a href="https://tangty11.github.io">Yuhan Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Yaoxiang Pu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/Haotong-Zhang">Haotong Zhang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cypypccpy.github.io">Yuanpei Chen</a><sup>24</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yangyaodong.com">Yaodong Yang</a><sup>12</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>indicates equal contribution</span>
+            <!-- <span class="author-block"><sup>†</sup>indicates corresponding authors</span> -->
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Instistute of AI, Peking University</span>
+            <span class="author-block"><sup>2</sup>PKU-PsiBot Joint Lab</span>
+            <span class="author-block"><sup>3</sup>Nanjing University</span>
+            <span class="author-block"><sup>4</sup>PsiBot</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2403.02604.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.02604"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/sectionZ6/UniDoorManip"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/UniDoorManip/UniDoorManip?tab=readme-ov-file#dataset"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="padding-bottom: 20px;">
+      <img src="./static/images/pipeline.png"/>
+      <br>
+      <br>
+      <p style="text-align:justify!important;">
+         Our Proposed <b>Environment, Dataset and Universal Manipulation Policy</b>. 
+         We build a novel door manipulation environment equipped with a large-scale door dataset covering 6 door categories with hundreds of door bodies and handles, and configure it with different realistic door manipulation mechanisms. To learn the universal door manipulation policy, we propose a novel framework which can generalize to unseen shapes and categories.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths" style="padding-top: 20px;">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           Learning a universal manipulation policy encompassing doors with diverse categories, geometries and mechanisms, is crucial for future embodied agents to effectively work in complex and broad real-world scenarios. Due to the limited datasets and unrealistic simulation environments, previous works fail to achieve good performance across various doors. In this work, we build a novel door manipulation environment reflecting different realistic door manipulation mechanisms, and further equip this environment with a large-scale door dataset covering 6 door categories with hundreds of door bodies and handles, making up thousands of different door instances. Additionally, to better emulate real-world scenarios, we introduce a mobile robot as the agent and use the partial and occluded point cloud as the observation, which are not considered in previous works while possessing significance for real-world implementations. To learn a universal policy over diverse doors, we propose a novel framework disentangling the whole manipulation process into three stages, and integrating them by training in the reversed order of inference. Extensive experiments validate the effectiveness of our designs and demonstrate our framework's strong performance in simulation and real-world.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="./static/videos/ID_7401.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset</h2>
+        <hr style="margin-top:0px">
+        <h3 class="title is-4" style="margin-top:20px; margin-bottom:0px; color:#0d0e0e"><b>Annotation and Generation</b></h3>
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="padding-bottom: 20px;">
+            <img src="./static/images/dataset.png"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+
+        <!-- <div class="container is-max-desktop">
+          <div class="hero-body" style="padding-top: 20px;">
+            <img src="./static/images/dataset1.png"/>
+          </div>
+        </div> -->
+      </div>
+    </div>
+   </div>
+
+
+   <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Mechanism</h2>
+      <hr style="margin-top:0px">
+      <div class="container is-max-desktop" style="display: flex;">
+        <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+          <img src="./static/images/door_succ.gif"/>
+          <p class="is-bold"></p>
+        </div>
+        <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+          <img src="./static/images/door_failure.gif"/>
+          <p class="is-bold"></p>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop" style="display: flex;">
+        <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+          <img src="./static/images/safe_succ.gif"/>
+          <p class="is-bold"></p>
+        </div>
+        <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+          <img src="./static/images/safe_failure.gif"/>
+          <p class="is-bold"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+
+
+   <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <hr style="margin-top:0px">
+        <h3 class="title is-4" style="margin-top:20px; margin-bottom:0px; color:#0d0e0e"><b>Full Pipeline</b></h3>
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px;">
+            <img src="./static/images/fu_pipeline.png"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+
+
+
+   <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <hr style="margin-top:0px">
+
+        <!-- <h3 class="title is-4" style="margin-top:20px; margin-bottom:0px; color:#0d0e0e"><b>Affordance Results</b></h3>
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_door.png"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_window.png"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_safe.png"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_cabinet.png"/>
+            <p class="is-bold"></p>
+          </div>
+        </div> -->
+
+        <h3 class="title is-4" style="margin-top:20px; margin-bottom:0px; color:#0d0e0e"><b>Simulation Results</b></h3>
+        <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/cabinet.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/cabinet_1.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/fridge.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/fridge_1.gif"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+
+
+        <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/door.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/door_1.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/window.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/window_1.gif"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+
+
+        <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/car.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/car_1.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/safe.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 25%;">
+            <img src="./static/images/safe_1.gif"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+
+
+        <h3 class="title is-4" style="margin-top:20px; margin-bottom:0px; color:#0d0e0e"><b>RealWorld Results</b></h3>
+        <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_door.png"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_window.png"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+        <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_safe.png"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/affordance/realworld_cabinet.png"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+
+        <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/opendoor.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/openwindow.gif"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+
+
+        <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/opensafe.gif"/>
+            <p class="is-bold"></p>
+          </div>
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+            <img src="./static/images/opencabinet.gif"/>
+            <p class="is-bold"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{li2024unidoormanip,
+  title={UniDoorManip: Learning Universal Door Manipulation Policy Over Large-scale and Diverse Door Manipulation Environments},
+  author={Li, Yu and Zhang, Xiaojie and Wu, Ruihai and Zhang, Zilong and Geng, Yiran and Dong, Hao and He, Zhaofeng},
+  journal={arXiv preprint arXiv:2403.02604},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+
+  
+<div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths ">
+        <h2 class="title is-3">Motivating Projects</h2>
+        <hr style="margin-top:0px">
+
+        <div style="text-align: justify; display: flex; justify-content: center; margin-left: 10%; margin-right: 10%; margin-bottom: 20px;">
+            <div class="col-sm-3" style=" max-width: 25%;margin-right: 15px;">
+              <img src='./static/images/data_demo-ezgif.com-video-to-gif-converter.gif' class='img-fluid'>
+            </div>
+
+            <div class="col" style="flex-basis: 0; flex-grow: 1;">
+                <div style="box-sizing: border-box;">
+                    <a href="https://sapien.ucsd.edu/browse">PartNet-Mobility Dataset  (in SAPIEN Simulator)</a>
+                </div>
+              <div style="box-sizing: border-box; font-weight: bold;">
+                CVPR 2020
+                </div>
+                <div style="box-sizing: border-box; font-weight: bold;">
+                Fanbo Xiang, Yuzhe Qin, Kaichun Mo, Yikuan Xia, Hao Zhu, Fangchen Liu, Minghua Liu, Hanxiao Jiang, Yifu Yuan, He Wang, Li Yi, Angel X. Chang, Leonidas J. Guibas, Hao Su
+                </div>
+                <div style="box-sizing: border-box;">
+                          PartNet-Mobility dataset is a collection of 2K articulated objects with motion annotations and rendernig material. The dataset powers research for generalizable computer vision and manipulation. The dataset is a continuation of ShapeNet and PartNet.
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: justify; display: flex; justify-content: center; margin-left: 10%; margin-right: 10%;">
+            <div class="col-sm-3" style=" max-width: 25%;margin-right: 15px;">
+              <img src='./static/images/vat_mart.gif' class='img-fluid'>
+            </div>
+
+            <div class="col" style="flex-basis: 0; flex-grow: 1;">
+                <div style="box-sizing: border-box;">
+                    <a href="https://hyperplane-lab.github.io/vat-mart/">VAT-Mart: Learning Visual Action Trajectory Proposals for Manipulating 3D ARTiculated Objects</a>
+                </div>
+              <div style="box-sizing: border-box; font-weight: bold;">
+                ICLR 2022
+                </div>
+                <div style="box-sizing: border-box; font-weight: bold;">
+                Ruihai Wu*, Yan Zhao*, Kaichun Mo*, Zizheng Guo, Yian Wang, Tianhao Wu, Qingnan Fan, Xuelin Chen, Leonidas J. Guibas, Hao Dong
+                </div>
+                <div style="box-sizing: border-box;">
+                          We design an interaction-for-perception framework VAT-MART to learn such
+                          actionable visual representations by simultaneously training a curiosity-driven reinforcement learning policy exploring diverse interaction trajectories and a perception
+                          module summarizing and generalizing the explored knowledge for pointwise predictions among diverse shapes. 
+
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+</div>
+
+<div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths ">
+        <h2 class="title is-3">Other Related Projects</h2>
+        <hr style="margin-top:0px">
+
+         <div style="text-align: justify; display: flex; justify-content: center; margin-left: 10%; margin-right: 10%; margin-bottom: 20px;">
+            <div class="col-sm-3" style=" max-width: 25%;margin-right: 15px;">
+              <img src='./static/images/rlafford1.jpg' class='img-fluid'>
+            </div>
+
+            <div class="col" style="flex-basis: 0; flex-grow: 1;">
+                <div style="box-sizing: border-box;">
+                    <a href="https://sites.google.com/view/rlafford/">RLAfford: End-to-End Affordance Learning for Robotic Manipulation</a>
+                </div>
+                <div style="box-sizing: border-box; font-weight: bold;">
+                ICRA 2023
+                </div>
+                <div style="box-sizing: border-box; font-weight: bold;">
+                Yiran Geng*, Boshi An*, Haoran Geng, Yuanpei Chen, Yaodong Yang, Hao Dong
+                </div>
+                <div style="box-sizing: border-box;">
+                we take advantage of visual affordance by using the contact information generated during the RL training process to predict contact maps of interest. 
+                Such contact prediction process then leads to an end-to-end affordance learning framework that can generalize over different types of manipulation tasks.
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: justify; display: flex; justify-content: center; margin-left: 10%; margin-right: 10%;">
+            <div class="col-sm-3" style=" max-width: 25%;margin-right: 15px;">
+              <img src='./static/images/adaafford.jpg' class='img-fluid'>
+            </div>
+
+            <div class="col" style="flex-basis: 0; flex-grow: 1;">
+                <div style="box-sizing: border-box;">
+                    <a href="https://hyperplane-lab.github.io/AdaAfford/">AdaAfford: Learning to Adapt Manipulation Affordance for 3D Articulated Objects via Few-shot Interactions</a>
+                </div>
+              <div style="box-sizing: border-box; font-weight: bold;">
+                ECCV 2022
+                </div>
+                <div style="box-sizing: border-box; font-weight: bold;">
+                Yian Wang*, Ruihai Wu*, Kaichun Mo*, Jiaqi Ke, Qingnan Fan, Leonidas J. Guibas, Hao Dong
+                </div>
+                <div style="box-sizing: border-box;">
+                We propose a novel framework, named AdaAfford, that learns to perform very few test-time interactions for quickly adapting the affordance priors to more accurate instance-specific posteriors. 
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: justify; display: flex; justify-content: center; margin-left: 10%; margin-right: 10%; margin-bottom: 20px;">
+            <div class="col-sm-3" style=" max-width: 25%;margin-right: 15px;">
+              <img src='./static/images/dualafford.png' class='img-fluid'>
+            </div>
+
+            <div class="col" style="flex-basis: 0; flex-grow: 1;">
+                <div style="box-sizing: border-box;">
+                    <a href="https://hyperplane-lab.github.io/DualAfford/">DualAfford: Learning Collaborative Visual Affordance for Dual-gripper Manipulation</a>
+                </div>
+              <div style="box-sizing: border-box; font-weight: bold;">
+                ICLR 2023
+                </div>
+                <div style="box-sizing: border-box; font-weight: bold;">
+                Yan Zhao*, Ruihai Wu*, Zhehuan Chen, Yourong Zhang, Qingnan Fan, Kaichun Mo, Hao Dong
+                </div>
+                <div style="box-sizing: border-box;">
+                we propose a novel learning framework, DualAfford, to learn collaborative affordance for dual-gripper manipulation tasks. 
+                The core design of the approach is to reduce the quadratic problem for two grippers into two disentangled yet inter-connected subtasks for efficient learning.
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="xxx">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/UniDoorManip/UniDoorManip" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+           Website template borrowed
+              from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>, <a
+                href="https://peract.github.io/">PerAct</a> and <a href="https://voxposer.github.io/">VoxPoser</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
