@@ -176,7 +176,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           Learning a universal manipulation policy encompassing doors with diverse categories, geometries and mechanisms, is crucial for future embodied agents to effectively work in complex and broad real-world scenarios. Due to the limited datasets and unrealistic simulation environments, previous works fail to achieve good performance across various doors. In this work, we build a novel door manipulation environment reflecting different realistic door manipulation mechanisms, and further equip this environment with a large-scale door dataset covering 6 door categories with hundreds of door bodies and handles, making up thousands of different door instances. Additionally, to better emulate real-world scenarios, we introduce a mobile robot as the agent and use the partial and occluded point cloud as the observation, which are not considered in previous works while possessing significance for real-world implementations. To learn a universal policy over diverse doors, we propose a novel framework disentangling the whole manipulation process into three stages, and integrating them by training in the reversed order of inference. Extensive experiments validate the effectiveness of our designs and demonstrate our framework's strong performance in simulation and real-world.
+            Generative models, such as diffusion and flow-based models, have
+shown strong promise for robot policy learning by capturing complex and multi-modal action 
+distributions from demonstrations. However, policies trained solely
+with imitation learning often suffer from imperfect demonstrations and distributional shifts, 
+while further improvement typically requires additional expert data.
+Reinforcement learning offers a natural solution through environment interaction,
+but effectively finetuning generative robot policies remains challenging due to
+the intractability of likelihood estimation. In this work, we propose <b>RoboFFT</b>,
+a forward-process reinforcement learning framework for finetuning generative
+robot policies, which applies forward noising to sampled actions and uses the
+weighted score / flow matching loss to construct a surrogate policy ratio for PPO-style updates. 
+We evaluate <b>RoboFFT</b> with popular generative robot policies on
+representative simulation benchmarks, including long-horizon planning and sparse
+reward settings. Extensive experiments and analysis demonstrate that <b>RoboFFT</b>
+consistently improves performance while achieving better stability and training
+efficiency. We further integrate <b>RoboFFT</b> into a real world RL framework and
+demonstrate its effectiveness in real world tasks.
           </p>
         </div>
       </div>
