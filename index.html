@@ -50,7 +50,6 @@
     </a>
   </div>
 
-  </div>
 </nav>
 
 
@@ -214,7 +213,7 @@ demonstrate its effectiveness in real world tasks.
 
 
 
-    <!-- Dataset. TO BE REPLACED. -->
+    <!-- Dataset. TO BE REPLACED. 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Dataset</h2>
@@ -227,16 +226,16 @@ demonstrate its effectiveness in real world tasks.
           </div>
         </div>
 
-        <!-- <div class="container is-max-desktop">
+        <!- <div class="container is-max-desktop">
           <div class="hero-body" style="padding-top: 20px;">
             <img src="./static/images/dataset1.png"/>
           </div>
-        </div> -->
+        </div> 
       </div>
     </div>
    </div>
 
-   <!-- Mechanism. TO BE REPLACED. -->
+   <!- Mechanism. TO BE REPLACED. 
    <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
       <h2 class="title is-3">Mechanism</h2>
@@ -264,7 +263,7 @@ demonstrate its effectiveness in real world tasks.
       </div>
     </div>
   </div>
- </div>
+ </div> -->
 
 
 
@@ -281,7 +280,6 @@ demonstrate its effectiveness in real world tasks.
           </div>
         </div>
       </div>
-    </div>
    </div>
 
 
@@ -313,6 +311,85 @@ demonstrate its effectiveness in real world tasks.
             <p class="is-bold"></p>
           </div>
         </div> -->
+
+
+        <!-- Quantitive Results. -->
+
+        <h3 class="title is-4"  style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>Quantitative Results</b></h3>
+
+        <!-- Figure 3: Main Robomimic Results -->
+        <div style="margin-bottom: 35px;">
+          <img src="./static/others/figure3.svg"
+              alt="RoboFFT performance on Robomimic tasks"/>
+          <p>
+            RoboFFT achieves competitive or stronger performance across
+            Robomimic state- and pixel-input manipulation tasks.
+          </p>
+        </div>
+
+
+        <!-- Figure 4 + Figure 5 -->
+        <div class="columns is-vcentered">
+
+          <div class="column is-half">
+            <img src="./static/others/figure4.svg"
+                alt="RoboFFT training efficiency"/>
+            <p>
+              RoboFFT-F achieves an average <b>1.53× training-time speedup</b>
+              over ReinFlow.
+            </p>
+          </div>
+
+          <div class="column is-half">
+            <img src="./static/others/figure5.svg"
+                alt="RoboFFT VLA finetuning results"/>
+            <p>
+              RoboFFT improves the pretrained VLA policy on
+              LIBERO-Object and LIBERO-Spatial.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Figure 9: Real-world quantitative comparison -->
+        <div class="columns is-centered" style="margin-top: 25px;">
+          <div class="column is-half">
+
+            <table class="table is-narrow" style="margin: 0 auto;">
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Flow</th>
+                  <th>RoboFFT</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Pick Eggplant</td>
+                  <td>12 / 20</td>
+                  <td><b>18 / 20</b></td>
+                </tr>
+
+                <tr>
+                  <td>Peg Insertion</td>
+                  <td>10 / 20</td>
+                  <td><b>19 / 20</b></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p style="margin-top: 10px;">
+              Real-world success rates before and after RoboFFT finetuning.
+            </p>
+
+          </div>
+        </div>
+
+
+
+
 
         <!-- Simulation Results. -->
         <h3 class="title is-4" style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>Simulation Results</b></h3>
@@ -387,7 +464,7 @@ demonstrate its effectiveness in real world tasks.
         </div>
 
       </div>
-    </div>
+
    </div>
 
 </section>
