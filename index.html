@@ -39,18 +39,59 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
-<body>
+<body id="top">
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+  <div class="container is-max-desktop">
 
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-semibold" href="#top">
+        RoboFFT
+      </a>
+
+      <a role="button"
+         class="navbar-burger"
+         aria-label="menu"
+         aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+
+        <a class="navbar-item" href="#abstract">
+          Abstract
+        </a>
+
+        <a class="navbar-item" href="#video">
+          Video
+        </a>
+
+        <a class="navbar-item" href="#overview">
+          Overview
+        </a>
+
+        <a class="navbar-item" href="#quantitative-results">
+          Quantitative
+        </a>
+
+        <a class="navbar-item" href="#simulation-results">
+          Simulation
+        </a>
+
+        <a class="navbar-item" href="#real-world-results">
+          Real World
+        </a>
+
+      </div>
+    </div>
+
+  </div>
 </nav>
+
 
 
 <section class="hero">
@@ -171,7 +212,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+    <div id="abstract" class="columns is-centered has-text-centered">
       <div class="column is-four-fifths" style="padding-top: 20px;">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
@@ -200,7 +241,7 @@ demonstrate its effectiveness in real world tasks.
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <div id="video" class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -268,7 +309,7 @@ demonstrate its effectiveness in real world tasks.
 
 
    <!-- Method. -->
-   <div class="columns is-centered has-text-centered">
+   <div id="overview" class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
         <hr style="margin-top:0px">
@@ -313,9 +354,9 @@ demonstrate its effectiveness in real world tasks.
         </div> -->
 
 
-        <!-- Quantitive Results. -->
+        <!-- Quantitative Results. -->
 
-        <h3 class="title is-4"  style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>Quantitative Results</b></h3>
+        <h3 id="quantitative-results" class="title is-4"  style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>Quantitative Results</b></h3>
 
         <!-- Figure 3: Main Robomimic Results -->
         <div style="margin-bottom: 35px;">
@@ -392,7 +433,7 @@ demonstrate its effectiveness in real world tasks.
 
 
         <!-- Simulation Results. -->
-        <h3 class="title is-4" style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>Simulation Results</b></h3>
+        <h3 id="simulation-results" class="title is-4" style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>Simulation Results</b></h3>
         
         <div class="columns is-centered">
           <div class="column is-four-fifths">
@@ -433,7 +474,7 @@ demonstrate its effectiveness in real world tasks.
         </div>
 
         <!-- RealWorld Results. -->
-        <h3 class="title is-4" style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>RealWorld Results</b></h3>
+        <h3 id="real-world-results" class="title is-4" style="margin-top:20px; margin-bottom:30px; color:#0d0e0e"><b>Real-world Results</b></h3>
 
         <div class="columns is-centered">
           <div class="column is-four-fifths">
