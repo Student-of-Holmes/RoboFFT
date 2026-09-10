@@ -1,0 +1,13 @@
+# macOS metadata
+.DS_Store
+
+# Original MOV videos - keep locally only
+static/real/*.mov
+
+# Failure demos are not used on the project page
+static/real/*_fail.mp4
+
+# Oversized original success videos
+# Later we can create smaller web versions for the website
+static/real/pick_eggplant.mp4
+static/real/peg_insertion_success.mp4
