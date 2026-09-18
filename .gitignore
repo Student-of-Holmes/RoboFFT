@@ -1,6 +1,6 @@
 # macOS metadata
 .DS_Store
-
+.venv
 # Original MOV videos - keep locally only
 static/real/*.mov
 
